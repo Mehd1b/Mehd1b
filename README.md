@@ -1,6 +1,6 @@
 # Hi, I'm Mehdi
 
-I'm a Rust engineer. I work on the parts of a system where a bug costs someone money: exchanges, custody, smart contracts, zero-knowledge verifiers. More recently that includes AI agents, and making them prove what they did.
+I'm a lead engineer in @mantiq-technologies. I work on the parts of a system where a bug costs someone money: exchanges, custody, smart contracts, zero-knowledge proofs. More recently that includes AI agents, and making them prove what they did.
 
 I trained as an engineer (statistics and signal processing), then did a Master in Finance at ESSEC and a stint on the exotic equity derivatives desk at Natixis. So I can sit down with a trading or compliance team, work out what they actually need, and build it myself. I speak French, English and Arabic.
 
