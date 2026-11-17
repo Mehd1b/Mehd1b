@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100%" alt="Mehdi Beriane: Rust, exchanges, zero-knowledge, AI agents" src="assets/header.svg" />
+  <img width="100%" alt="Mehdi Beriane: Rust, DeFi, CEX, DEX, zero-knowledge, AI agents" src="assets/header.svg" />
 </p>
 
 <p align="center">
