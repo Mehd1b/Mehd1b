@@ -28,46 +28,58 @@ I trained as an engineer (statistics and signal processing), then did a Master i
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Defiesta/execution-kernel">Execution Kernel</a></h3>
-      <p>An autonomous trading agent runs inside a zkVM and comes out with a proof that it stayed within its limits. I designed and wrote it, and the same kernel is now the base of <a href="https://github.com/tokamak-network/Tokamak-AI-Layer">Tokamak's agent layer</a>.</p>
+      <h3><a href="https://github.com/tokamak-network/Tokamak-AI-Layer">Tokagent</a></h3>
+      <p>DeFi agents that have to prove their work. An agent manages on-chain capital, runs inside a RISC Zero zkVM, and its output is verified on Ethereum before any funds move. I built it end to end: the Rust kernel, the contracts and the app. <a href="https://tokagent.network">tokagent.network</a></p>
       <img alt="Rust" src="https://img.shields.io/badge/Rust-0b1220?style=flat-square&logo=rust&logoColor=white" />
       <img alt="RISC Zero" src="https://img.shields.io/badge/RISC_Zero-0b1220?style=flat-square" />
       <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
+      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0b1220?style=flat-square&logo=typescript&logoColor=white" />
     </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/tokamak-network/Tokagentos-monorepo">tokagentOS</a></h3>
+      <p>An open-source framework for AI agents that come with their own crypto wallet. An agent can hold tokens, sign, and pay for its own model calls in crypto. It is a fork of elizaOS, and I built the Tokamak side: the wallet, the crypto billing, the project scaffolder and the app catalog. <a href="https://www.tokagentos.com">tokagentos.com</a></p>
+      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0b1220?style=flat-square&logo=typescript&logoColor=white" />
+      <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://eprint.iacr.org/2025/1390">zk-EVM verifier</a></h3>
       <p>First author of the paper. On-chain proof verification went from 857,200 gas to 748,450. I also wrote a large part of the rollup's <a href="https://github.com/tokamak-network/Tokamak-zk-EVM-contracts">Layer 1 contracts</a>.</p>
       <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
       <img alt="BLS12-381" src="https://img.shields.io/badge/BLS12--381-0b1220?style=flat-square" />
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/tokamak-network/gem-nft-contract">GemSTON</a></h3>
       <p>NFTs backed by staked TON, with a marketplace and the liquid staking token underneath. I wrote nearly all of it.</p>
       <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
       <img alt="Stars" src="https://img.shields.io/github/stars/tokamak-network/gem-nft-contract?style=flat-square&label=stars&color=0b1220" />
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/Mehd1b/Poseidon-bls12381-EVM">Poseidon for BLS12-381</a></h3>
       <p>Poseidon hashing for the EVM. About 33K gas per hash in Yul, against 440K in plain Solidity. Not audited, so read it before you rely on it.</p>
       <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
       <img alt="Yul" src="https://img.shields.io/badge/Yul-0b1220?style=flat-square" />
     </td>
+    <td width="50%" valign="top">
+      <h3>Security reviews</h3>
+      <p>I review contracts before they ship. Some of what I found is public: <a href="https://github.com/tokamak-network/ton-staking-v2/issues?q=is%3Aissue+author%3AMehd1b">staking v2</a>, the <a href="https://github.com/tokamak-network/tokamak-thanos/issues?q=is%3Aissue+author%3AMehd1b">Thanos bridge</a> and <a href="https://github.com/tokamak-network/Commit-Reveal2/issues?q=is%3Aissue+author%3AMehd1b">Commit-Reveal²</a>.</p>
+      <img alt="Solidity" src="https://img.shields.io/badge/Solidity-0b1220?style=flat-square&logo=solidity&logoColor=white" />
+    </td>
   </tr>
 </table>
 
-How the Execution Kernel fits together:
+How Tokagent works:
 
 ```mermaid
 flowchart LR
-    A["Agent code<br/>Rust"] --> B["Execution Kernel<br/>RISC Zero zkVM"]
+    A["Agent<br/>Rust"] --> B["RISC Zero zkVM"]
     B --> C["Proof of the run"]
-    C --> D["Verifier contract<br/>Solidity, on-chain"]
+    C --> D["Verifier contract<br/>on Ethereum"]
+    D --> E["Vault<br/>moves the funds"]
 ```
-
-**Security reviews**  
-I review contracts before they ship. Some of what I found is public: [staking v2](https://github.com/tokamak-network/ton-staking-v2/issues?q=is%3Aissue+author%3AMehd1b), the [Thanos bridge](https://github.com/tokamak-network/tokamak-thanos/issues?q=is%3Aissue+author%3AMehd1b) and [Commit-Reveal²](https://github.com/tokamak-network/Commit-Reveal2/issues?q=is%3Aissue+author%3AMehd1b).
 
 ## What I work with
 
